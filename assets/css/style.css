@@ -1,0 +1,274 @@
+/* 
+    Liquor Store Management System - Rwanda Version
+    Custom Professional Styles
+*/
+/* 1. Theme Definitions */
+:root {
+    /* Light Mode (Default) */
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --sidebar-bg: #1a1a2e;
+    --navbar-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Colors */
+    --bg-body: #0f0e17;
+    --bg-card: #16161a;
+    --text-main: #fffffe;
+    --text-muted: #a7a9be;
+    --border-color: #242629;
+    --sidebar-bg: #000000;
+    --navbar-bg: #16161a;
+}
+
+/* 2. Apply variables to standard elements */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-main) !important;
+}
+
+.table {
+    color: var(--text-main) !important;
+}
+
+.table-light {
+    --bs-table-bg: var(--border-color);
+}
+
+.navbar-custom {
+    background-color: var(--navbar-bg) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Fix for inputs in Dark Mode */
+[data-theme="dark"] .form-control, 
+[data-theme="dark"] .form-select {
+    background-color: #242629;
+    border-color: #444;
+    color: white;
+}
+[data-theme="dark"] .form-control:focus {
+    background-color: #242629;
+    color: white;
+}
+
+:root {
+    --primary-navy: #1a1a2e;
+    --secondary-navy: #16213e;
+    --accent-red: #e94560; /* Professional Rwanda Accent */
+    --accent-gold: #f0a500;
+    --bg-light: #f4f7f6;
+    --sidebar-width: 260px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 1. Global Reset & Typography */
+body {
+    font-family: 'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* 2. Sidebar Layout */
+#sidebar {
+    min-width: var(--sidebar-width);
+    max-width: var(--sidebar-width);
+    background: var(--primary-navy);
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    transition: var(--transition);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#sidebar .sidebar-header {
+    padding: 25px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#sidebar ul.components {
+    padding: 15px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+#sidebar ul li a i {
+    margin-right: 15px;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: rgba(233, 69, 96, 0.1);
+}
+
+#sidebar ul li.active > a {
+    color: #fff;
+    background: rgba(233, 69, 96, 0.15);
+    border-left: 4px solid var(--accent-red);
+    font-weight: 500;
+}
+
+/* 3. Main Content Area */
+#content {
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    transition: var(--transition);
+    min-height: 100vh;
+}
+
+.top-navbar {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 30px;
+}
+
+/* 4. POS (Point of Sale) Specialized Styles */
+.pos-container {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.product-grid {
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.product-card {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    transition: var(--transition);
+    cursor: pointer;
+    background: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+    box-shadow: 0 8px 15px rgba(233, 69, 96, 0.1);
+}
+
+.cart-panel {
+    background: #f8f9fa;
+    border-left: 1px solid #eee;
+    height: calc(100vh - 100px);
+}
+
+.cart-items {
+    height: 60%;
+    overflow-y: auto;
+}
+
+/* 5. UI Components & Elements */
+.card-stat {
+    border: none;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.card-stat:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--accent-red);
+    border-color: var(--accent-red);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #d63d58;
+    border-color: #d63d58;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* 6. Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+/* 7. Responsive Adjustments */
+@media (max-width: 992px) {
+    #sidebar {
+        margin-left: calc(-1 * var(--sidebar-width));
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+        margin-left: 0;
+    }
+    #content.active {
+        margin-left: var(--sidebar-width);
+    }
+}
+
+/* 8. Print Styles for Receipts */
+@media print {
+    #sidebar, .top-navbar, .btn, .no-print {
+        display: none !important;
+    }
+    #content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
